@@ -10,8 +10,13 @@ const shouldUpdateComponent = require('./shouldUpdateComponent');
 class Component {
   constructor(props) {
     this.props = props;
+
+    // render() => element
     this._currentElement = null;
+
+    // setState( *state* )
     this._pendingState = null;
+
     this._renderedComponent = null;
     this._renderedNode = null;
 
@@ -21,6 +26,8 @@ class Component {
   setState(partialState) {
     // React uses a queue here to allow batching.
     this._pendingState = partialState;
+
+    // => Reconciler
     UpdateQueue.enqueueSetState(this, partialState);
   }
 
@@ -29,6 +36,7 @@ class Component {
   // That also allows renderers to have their own implementation specific wrappers.
   // This ensures that React.Component is available across platforms.
   _construct(element) {
+    // FIXME: ????
     this._currentElement = element;
   }
 

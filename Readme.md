@@ -12,3 +12,6 @@ Be sure to check out the other talks too - all of the speakers did an amazing jo
 ## Check out the code:
 
 I've included the annotated code that I used in my talk, in the `dilithium` directory. Keep in mind it probably differs slightly from what was shown in the slides (I took a few liberties to make it fit).
+
+## NOTE
+![](./arc.jpg)

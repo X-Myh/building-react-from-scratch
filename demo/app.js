@@ -37,9 +37,7 @@ class ColorSwatch extends Dilithium.Component {
   }
 }
 
-window.addEventListener('click', () => {
-  Dilithium.render(
-    <CounterButton title="Hello React Rally!" />,
-    document.getElementById('container'),
-  );
-});
+Dilithium.render(
+  <CounterButton title="Hello React Rally!" />,
+  document.getElementById('container'),
+);

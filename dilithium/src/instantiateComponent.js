@@ -14,7 +14,10 @@ function instantiateComponent(element) {
     wrapperInstance = HostComponent.construct(element);
   } else if (typeof type === 'function') {
     wrapperInstance = new element.type(element.props);
+
+    // FIXME ????
     wrapperInstance._construct(element);
+
   } else if (typeof element === 'string' || typeof element === 'number') {
     wrapperInstance = HostComponent.constructTextComponent(element);
   }
